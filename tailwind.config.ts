@@ -8,13 +8,25 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      fontFamily: {
+        yekan: ['Yekan Bakh', 'Arial', 'sans-serif'],
+        vazir: ['Vazir', 'Arial', 'sans-serif']
+      },
+      colors: {
+        primary: '#f3a711', // Yellow color for primary elements
+        secondary: '#202020', // Dark background
+        text: '#ffffff', // Text color
+        grayText: '#aaa', // Gray text color for subtler elements
+      },
+      spacing: {
+        '18': '4.5rem',
       },
     },
   },
-  plugins: [],
+  plugins: [    require('daisyui'),require('tailwindcss-rtl')
+  ],
+  daisyui: {
+    themes: ["winter"],
+  },
 };
 export default config;
